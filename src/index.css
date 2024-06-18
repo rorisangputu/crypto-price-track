@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 body {
-    background: linear-gradient(to top right, #1e3a8a, #4c1d95);
+    background: linear-gradient(to top right, #101f48, #3c107f);
     /* Color values for blue-900 and purple-900 */
-}
-
-.navMenu {
-    background: linear-gradient(to top right, #1e3a8a, #4c1d95);
 }
