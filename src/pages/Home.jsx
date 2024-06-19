@@ -1,7 +1,17 @@
+import { useContext, useEffect, useState } from "react"
 import Hero from "../components/Hero"
+import { CoinContext } from "../context/CoinContext"
+
 
 
 const Home = () => {
+    const { allCoin, currency } = useContext(CoinContext);
+    const [displayCoin, setDisplayCoin] = useState([]);
+
+    useEffect(() => {
+        setDisplayCoin(allCoin);
+    }, [allCoin])
+
     return (
         <div>
             <Hero />
