@@ -2,6 +2,8 @@ import logo from '../assets/logo.png';
 import arrow from '../assets/arrow_icon.png';
 import { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+
 
 
 const Navbar = () => {
@@ -15,11 +17,13 @@ const Navbar = () => {
     return (
         <nav className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
             <div className='h-8'>
-                <img className='w-full' src={logo} alt="" />
+                <Link to={"/"}>
+                    <img className='w-full' src={logo} alt="" />
+                </Link>
             </div>
             <div className='w-full flex justify-end'>
                 <ul className='hidden md:flex cursor-pointer'>
-                    <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'>Home</li>
+                    <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'><Link to={"/"}>Home</Link></li>
                     <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'>Features</li>
                     <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'>Prices</li>
                     <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'>Blog</li>
@@ -49,7 +53,7 @@ const Navbar = () => {
                     <img className='w-25 h-9' src={logo} alt="" />
                 </div>
                 <ul className='cursor-pointer'>
-                    <li className='pl-7 p-4 hover:bg-purple-900 duration-50 border-b border-b-gray-900'>Home</li>
+                    <li className='pl-7 p-4 hover:bg-purple-900 duration-50 border-b border-b-gray-900'><Link to={"/"}>Home</Link></li>
                     <li className='pl-7 p-4 hover:bg-purple-900 duration-50 border-b border-b-gray-900'>Features</li>
                     <li className='pl-7 p-4 hover:bg-purple-900 duration-50 border-b border-b-gray-900'>Prices</li>
                     <li className='pl-7 p-4 hover:bg-purple-900 duration-50 '>Blog</li>

@@ -4,6 +4,7 @@ export const CoinContext = createContext(); // Change coinContext to CoinContext
 
 const CoinContextProvider = (props) => { // Change CoinContext to CoinContextProvider
 
+
     const [allCoin, setAllCoin] = useState([]);
     const [currency, setCurrency] = useState({
         name: "usd",

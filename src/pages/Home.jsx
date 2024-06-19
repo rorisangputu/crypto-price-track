@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react"
 import Hero from "../components/Hero"
 import { CoinContext } from "../context/CoinContext"
+import { Link } from "react-router-dom"
+
 
 
 
@@ -53,7 +55,7 @@ const Home = () => {
                     <p className="font-semibold">Market Cap</p>
                 </div>
                 {displayCoin.slice(0, 10).map((item, index) => (
-                    <div key={index} className="grid grid-cols-[0.2fr,2fr,1fr,1.4fr,1.5fr] p-4 flex items-center text-white  text-sm md:text-lg">
+                    <Link to={`/coin/${item.id}`} key={index} className="grid grid-cols-[0.2fr,2fr,1fr,1.4fr,1.5fr] p-4 flex items-center text-white  text-sm md:text-lg">
                         <p>{item.market_cap_rank}</p>
                         <div className="flex items-center gap-1 sm:gap-3 md:gap-5">
                             <img className="h-4 sm:h-6 lg:h-8 ml-1 sm:ml-2 md:ml-3" src={item.image} alt="" />
@@ -62,7 +64,7 @@ const Home = () => {
                         <p>{item.current_price.toLocaleString()}</p>
                         <p className={item.price_change_percentage_24h > 0 ? "text-green-600" : "text-red-600"}>{Math.floor(item.price_change_percentage_24h * 100) / 100}</p>
                         <p>{item.market_cap ? Number(item.market_cap).toLocaleString() : 'N/A'}</p>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
