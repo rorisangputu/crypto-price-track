@@ -11,6 +11,9 @@ const Hero = ({ setDisplayCoin, allCoin }) => {
 
     const inputHandler = (e) => {
         setInput(e.target.value)
+        if (e.target.value === "") {
+            setDisplayCoin(allCoin);
+        }
     }
 
     const searchHandler = (e) => {
@@ -38,10 +41,18 @@ const Hero = ({ setDisplayCoin, allCoin }) => {
                 <form onSubmit={searchHandler} className="mt-5 bg-white w-[265px] md:w-[425px] h-11 md:h-12 flex justify-center items-center rounded-lg mx-auto">
                     <input
                         onChange={inputHandler} required value={input}
-                        className="w-55 md:w-80 bg-transparent h-7 text-black md:h-10 rounded-lg"
+                        className="w-55 md:w-80 bg-transparent h-8 text-black md:h-10 rounded-lg"
                         type="text"
                         placeholder="Search crypto.."
+                        list="coinlist"
                     />
+
+                    <datalist id="coinlist">
+                        {allCoin.map((item, index) => (
+                            <option key={index} value={item.name} />
+                        ))}
+                    </datalist>
+
                     <button className="ml-2 text-white bg-purple-900 w-16 
                         md:w-20 rounded-lg h-8 md:h-10" type="submit"
                     >
