@@ -5,14 +5,12 @@ import { CoinContext } from "../context/CoinContext"
 
 
 const Home = () => {
-    const { allCoin, currency } = useContext(CoinContext);
+    const { allCoin, currency, setCurrency } = useContext(CoinContext);
     const [displayCoin, setDisplayCoin] = useState([]);
 
     useEffect(() => {
         setDisplayCoin(allCoin);
     }, [allCoin])
-
-    const { setCurrency } = useContext(CoinContext);
 
     const currencyHandler = (e) => {
         const value = e.target.value;
@@ -36,7 +34,7 @@ const Home = () => {
 
     return (
         <div>
-            <Hero />
+            <Hero setDisplayCoin={setDisplayCoin} allCoin={allCoin} />
             <div className="max-w-[450px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] flex mx-auto justify-between text-white text-medium mb-2">
                 <p className="ml-1">Currency: {currency.symbol}</p>
                 <select onChange={currencyHandler} className='bg-transparent w-[70px] rounded-md font-medium 
