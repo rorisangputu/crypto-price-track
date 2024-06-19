@@ -1,31 +1,11 @@
 import logo from '../assets/logo.png';
 import arrow from '../assets/arrow_icon.png';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { CoinContext } from '../context/CoinContext';
+
 
 const Navbar = () => {
 
-    const { setCurrency } = useContext(CoinContext);
-
-    const currencyHandler = (e) => {
-        const value = e.target.value;
-        const symbol = getSymbol(value);
-        setCurrency({ name: value, symbol });
-    };
-
-    const getSymbol = (currencyName) => {
-        switch (currencyName) {
-            case "usd":
-                return "$";
-            case "eur":
-                return "€";
-            case "zar":
-                return "R";
-            default:
-                return "$";
-        }
-    };
 
 
     const [nav, setNav] = useState(false);
@@ -53,12 +33,7 @@ const Navbar = () => {
                         </button>
                         <img className='object-contain' src={arrow} alt="" />
                     </div>
-                    <select onChange={currencyHandler} className='bg-transparent w-[70px] h-8 rounded-md font-medium 
-                        mx-auto py-2 p-2 ml-3'>
-                        <option value="usd">USD</option>
-                        <option value="eu">EUR</option>
-                        <option value="zar">ZAR</option>
-                    </select>
+
                 </div>
             </div>
             {/* MENU BUTTON */}

@@ -11,8 +11,8 @@ const Hero = () => {
                 >
                     Largest <br /> Crypto Marketplace
                 </h1>
-                <p className="md:text-3xl sm:text-2xl 
-                        text-xl font-medium sm:font-semibold md:font-bold py-5 md:py-4">
+                <p className="text-2xl sm:text-3xl md:text-3xl  
+                         font-medium sm:font-semibold md:font-bold py-5 md:py-4">
                     Welcome to the World&apos;s Leading <i>Cryptocurrency</i> Marketplace.
                 </p>
                 <form className="mt-5 bg-white w-[265px] md:w-[425px] h-11 md:h-12 flex justify-center items-center rounded-lg mx-auto">
