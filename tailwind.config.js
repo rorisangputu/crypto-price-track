@@ -15,6 +15,9 @@ export default {
       animation: {
         rotate: 'rotate 2s linear infinite',
       },
+      fontFamily: {
+        'space-grotesk': ['Space Grotesk', 'sans-serif'],
+      },
     },
   },
   plugins: [],

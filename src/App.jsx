@@ -8,7 +8,7 @@ import Footer from "./components/Footer"
 
 const App = () => {
   return (
-    <div className=" min-h-[100vh]">
+    <div className=" min-h-[100vh] ">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
