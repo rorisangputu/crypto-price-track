@@ -1,4 +1,5 @@
 import React from 'react'
+import download from "../../src/images/chooseus/crypto-app.png.png";
 
 const Download = () => {
     return (
@@ -9,7 +10,7 @@ const Download = () => {
                     <h3 className='text-2xl py-2 mx-20 md:mx-13 font-sans'>Be on the same wavelength with the market 24/7</h3>
                 </div>
                 <div>
-                    <img src="../../src/images/chooseus/crypto-app.png.png" alt="" />
+                    <img src={download} alt="" />
                 </div>
                 <div className='flex flex-col items-start justify-center py-5'>
                     <div className='text-white px-4 py-3 text-center mx-auto'>

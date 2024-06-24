@@ -2,6 +2,7 @@ import React from 'react'
 import { LuWallet } from "react-icons/lu";
 import { PiPencilLine } from "react-icons/pi";
 import { TbReceiptBitcoin } from "react-icons/tb";
+import skyscrape from "../../src/images/chooseus/bitcoin-skyscraper.png";
 
 
 
@@ -43,7 +44,7 @@ const WhyUs = () => {
                             </div>
                         </div>
                     </div>
-                    <img src="../../src/images/chooseus/bitcoin-skyscraper.png" className='w-96 h-96' alt="" />
+                    <img src={skyscrape} className='w-96 h-96' alt="" />
                     <div className='flex flex-col gap-x-7 py-10 gap-y-7'>
                         <div className='flex gap-x-5 items-center justify-center rounded-xl bg-slate-300 bg-opacity-5 border border-white border-opacity-10  w-[28rem] md:w-[24rem] lg:w-[28rem]'>
                             <div className='rounded-xl w-10 h-10 lg:w-12 lg:h-12  flex justify-center items-center bg-gradient-to-br from-[#2600fc] to-[#ff00ea]'>
