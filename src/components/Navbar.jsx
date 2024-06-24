@@ -23,9 +23,9 @@ const Navbar = () => {
             <div className='w-full flex justify-end'>
                 <ul className='hidden md:flex cursor-pointer'>
                     <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'><Link to={"/"}>Home</Link></li>
-                    <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'>Market</li>
-                    <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'>Why Us</li>
-                    <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'>Blog</li>
+                    <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'><a href="#market-updates">Market</a></li>
+                    <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'><a href="#why-us">Why Us</a></li>
+                    <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'><a href="#download">Download</a></li>
                 </ul>
                 <div className='flex items-center '>
                     <div className='hidden md:flex w-[100px] justify-center items-center rounded-lg bg-white text-black'>
@@ -57,9 +57,9 @@ const Navbar = () => {
                 </div>
                 <ul onClick={() => { setNav(false) }} className='cursor-pointer text-black text-xl'>
                     <li className='pl-7 p-4 hover:bg-purple-900 duration-50 border-b border-b-gray-900'><Link to={"/"}>Home</Link></li>
-                    <li className='pl-7 p-4 hover:bg-purple-900 duration-50 border-b border-b-gray-900'><Link to={"#market"}>Market Update</Link></li>
-                    <li className='pl-7 p-4 hover:bg-purple-900 duration-50 border-b border-b-gray-900'>Prices</li>
-                    <li className='pl-7 p-4 hover:bg-purple-900 duration-50 '>Blog</li>
+                    <li className='pl-7 p-4 hover:bg-purple-900 duration-50 border-b border-b-gray-900'><a href="#market-updates">Market</a></li>
+                    <li className='pl-7 p-4 hover:bg-purple-900 duration-50 border-b border-b-gray-900'><a href="#why-us">Why Us</a></li>
+                    <li className='pl-7 p-4 hover:bg-purple-900 duration-50 '><a href="#download">Download</a></li>
                 </ul>
                 <div className='flex mt-2 w-[150px] justify-center items-center rounded-lg bg-white text-black'>
                     <button className='h-8 flex items-center 

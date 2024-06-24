@@ -54,7 +54,7 @@ const Home = () => {
     return (
         <div className=" my-5">
             <Hero setDisplayCoin={setDisplayCoin} allCoin={allCoin} />
-            <h1 id="market-updates" className="text-white text-4xl md:text-7xl mt-5 container mx-auto text-center font-bold">Market Updates</h1>
+            <h1 id="market-updates" className="text-white text-5xl md:text-7xl mt-5 container mx-auto text-center font-bold">Market Updates</h1>
             <form onSubmit={searchHandler} className="my-5 bg-white w-[280px] md:w-[425px] h-11 md:h-12 flex justify-center items-center rounded-lg mx-auto">
                 <input
                     onChange={inputHandler} required value={input}

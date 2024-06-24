@@ -4,7 +4,7 @@ const Download = () => {
     return (
         <div className='w-full py-5'>
             <div className='container mx-auto flex flex-col items-center lg:flex-row lg:grid lg:grid-cols-3'>
-                <div className='text-white mx-auto flex flex-col items-center  text-center'>
+                <div id='download' className='text-white mx-auto flex flex-col items-center  text-center'>
                     <h1 className=' text-5xl font-semibold lg:text-7xl'>COINVUE</h1>
                     <h3 className='text-2xl py-2 mx-20 md:mx-13 font-sans'>Be on the same wavelength with the market 24/7</h3>
                 </div>

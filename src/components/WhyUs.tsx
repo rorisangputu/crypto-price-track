@@ -9,11 +9,11 @@ const WhyUs = () => {
     return (
         <div className='w-full pt-10 pb-5'>
             <div className='container mx-auto flex flex-col items-center'>
-                <div className='text-white flex flex-col text-7xl uppercase text-center sm:flex-row lg:text-8xl gap-x-5 font-semibold'>
+                <div id='why-us' className='text-white flex flex-col text-7xl uppercase text-center sm:flex-row lg:text-8xl gap-x-5 font-semibold'>
                     <span>Why</span>
                     <span className=' text-transparent bg-gradient-to-br from-[#2600fc] to-[#ff00ea] bg-clip-text'>Choose Us.</span>
                 </div>
-                <div className='flex flex-col items-center gap-x-8  py-16 xl:flex-row'>
+                <div className='flex flex-col items-center gap-x-8 py-16 xl:flex-row'>
                     <div className='flex flex-col gap-x-7 gap-y-7'>
                         <div className='flex gap-x-5 items-center justify-center rounded-xl bg-slate-300 bg-opacity-5 border border-white border-opacity-10  w-[28rem] md:w-[24rem] lg:w-[28rem]'>
                             <div className='rounded-xl w-10 h-10 lg:w-12 lg:h-12  flex justify-center items-center bg-gradient-to-br from-[#2600fc] to-[#ff00ea]'>

@@ -5,10 +5,14 @@ import Coin from "./pages/Coin"
 import Footer from "./components/Footer"
 import WhyUs from "./components/WhyUs"
 import Download from "./components/Download"
+import { useLocation } from "react-router-dom";
 
 
 
 const App = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   return (
     <div className=" min-h-[100vh] ">
       <Navbar />
@@ -16,8 +20,12 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/coin/:coinId" element={<Coin />} />
       </Routes>
-      <WhyUs />
-      <Download />
+      {isHomePage && (
+        <>
+          <WhyUs />
+          <Download />
+        </>
+      )}
       <Footer />
     </div>
   )
