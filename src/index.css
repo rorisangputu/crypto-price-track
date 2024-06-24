@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: linear-gradient(to top, #0f051d 10%, #130749 90%);
     /* Color values for blue-900 and purple-900 */

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 import { IconChevronDown } from "@tabler/icons-react";
 
 const Hero = () => {
@@ -36,7 +36,7 @@ const Hero = () => {
                         TRACK AND TRADE <span className="z-0 text-transparent bg-gradient-to-br from-[#2600fc] to-[#ff00ea] bg-clip-text">CRYPTO CURRENCIES</span>
                     </h1>
                 </div>
-                <a href="#market" className="text-xl font-semibold w-[25vh] h-[55px] text-center flex 
+                <a href="#market-updates" className="text-xl font-semibold w-[25vh] h-[55px] text-center flex 
                 items-center justify-center p-2 my-5 bg-gradient-to-r from-[#2600fc] to-[#ff00ea] 
                 text-[#f3f2f4] rounded-[10rem] transition-all duration-200 mx-auto md:hidden">
                     See Prices <IconChevronDown />
