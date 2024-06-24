@@ -55,7 +55,7 @@ const Navbar = () => {
                         </Link>
                     </div>
                 </div>
-                <ul className='cursor-pointer text-black text-xl'>
+                <ul onClick={() => { setNav(false) }} className='cursor-pointer text-black text-xl'>
                     <li className='pl-7 p-4 hover:bg-purple-900 duration-50 border-b border-b-gray-900'><Link to={"/"}>Home</Link></li>
                     <li className='pl-7 p-4 hover:bg-purple-900 duration-50 border-b border-b-gray-900'><Link to={"#market"}>Market Update</Link></li>
                     <li className='pl-7 p-4 hover:bg-purple-900 duration-50 border-b border-b-gray-900'>Prices</li>

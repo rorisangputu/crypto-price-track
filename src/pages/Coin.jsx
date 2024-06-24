@@ -6,8 +6,8 @@ import { CoinContext } from "../context/CoinContext";
 
 const Coin = () => {
     const { coinId } = useParams();
-    const [coinData, setCoinData] = useState();
-    const [historicalData, setHistoricalData] = useState();
+    const [coinData, setCoinData] = useState(null);
+    const [historicalData, setHistoricalData] = useState(null);
     const { currency } = useContext(CoinContext);
     const apiKey = 'CG-Gfj833UfRKisA5jvaTtaq8Tv';
     const fetchCoinData = async () => {
@@ -45,14 +45,19 @@ const Coin = () => {
     useEffect(() => {
         fetchCoinData();
         fetchHistoryData();
-    }, [currency])
+    }, [currency]);
 
-    if (!coinData && !historicalData) {
-        return (<div className="grid place-self-center min-h-[80vh]">
-            <div className="loader">
-
+    if (!coinData || !historicalData) {
+        return (
+            <div className="grid place-self-center min-h-[80vh]">
+                <div className="loader">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#ddd" strokeWidth="8" />
+                    </svg>
+                    <p>Loading...</p>
+                </div>
             </div>
-        </div>)
+        );
     }
     return (
         <div className="flex flex-col items-center justify-center  md:h-screen">
@@ -70,7 +75,7 @@ const Coin = () => {
                         <p className="lg:text-xl">Price: <span className="text-green-500">${coinData.market_data?.current_price[currency.name].toLocaleString()}</span></p>
                     </div>
                     <div className="px-5 py-5">
-                        <p className="lg:text-lg">{coinData.description ? coinData.description.en : ""}</p>
+                        <p className=" lg:text-lg">{coinData.description ? coinData.description.en : ""}</p>
                     </div>
                 </div>
             </div>

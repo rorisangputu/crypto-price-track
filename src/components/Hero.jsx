@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="text-white font-space-grotesk z-0">
             <div className="container mx-auto flex flex-col justify-center h-screen px-4 md:px-0 mt-[-96px]">
                 <div className="flex flex-col md:flex-row items-center justify-center relative">
-                    <h1 className=" z-0 text-6xl sm:text-6xl md:text-7xl lg:text-9xl font-bold md:py-6 text-center font-space-grotesk">
+                    <h1 className=" z-0 text-6xl sm:text-5xl md:text-7xl lg:text-9xl font-bold md:py-6 text-center font-space-grotesk">
                         TRACK AND TRADE <span className="z-0 text-transparent bg-gradient-to-br from-[#2600fc] to-[#ff00ea] bg-clip-text">CRYPTO CURRENCIES</span>
                     </h1>
                 </div>
