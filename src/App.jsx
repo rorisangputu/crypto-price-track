@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Coin from "./pages/Coin"
 import Footer from "./components/Footer"
 import WhyUs from "./components/WhyUs"
+import Download from "./components/Download"
 
 
 
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/coin/:coinId" element={<Coin />} />
       </Routes>
       <WhyUs />
+      <Download />
       <Footer />
     </div>
   )
