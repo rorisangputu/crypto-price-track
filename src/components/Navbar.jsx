@@ -1,4 +1,4 @@
-import arrow from '../assets/arrow_icon.png';
+import arrow from '../../src/images/arrow_icon.png';
 import { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
@@ -23,8 +23,8 @@ const Navbar = () => {
             <div className='w-full flex justify-end'>
                 <ul className='hidden md:flex cursor-pointer'>
                     <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'><Link to={"/"}>Home</Link></li>
-                    <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'>Features</li>
-                    <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'>Prices</li>
+                    <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'>Market</li>
+                    <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'>Why Us</li>
                     <li className='p-4 hover:scale-105 duration-50 hover:text-[#c7cad1]'>Blog</li>
                 </ul>
                 <div className='flex items-center '>
