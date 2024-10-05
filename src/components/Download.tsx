@@ -21,8 +21,8 @@ const Download = () => {
                         </p>
                     </div>
                     <div className='flex items-center mx-auto gap-x-3'>
-                        <img className=' rounded-lg h-10' src="../../src/images/chooseus/apple.jpg.png" alt="" />
-                        <img className=' rounded-lg h-10' src="../../src/images/chooseus/android-app.jpg.png" alt="" />
+                        <img className=' rounded-lg h-10' src="../../src/images/chooseus/apple.png" alt="" />
+                        <img className=' rounded-lg h-10' src="../../src/images/chooseus/android-app.png" alt="" />
                     </div>
                 </div>
             </div>
