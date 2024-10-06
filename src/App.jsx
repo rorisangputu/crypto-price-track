@@ -14,7 +14,7 @@ const App = () => {
   const isHomePage = location.pathname === "/";
 
   return (
-    <div className=" min-h-[100vh] ">
+    <div className="">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
