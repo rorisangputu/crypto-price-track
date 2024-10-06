@@ -41,7 +41,7 @@ const Hero = () => {
                 text-[#f3f2f4] rounded-[10rem] transition-all duration-200 mx-auto md:hidden">
                     See Prices <IconChevronDown />
                 </a>
-                <div className="hidden md:block w-full lg:w-[900px] mx-auto">
+                <div className="hidden md:flex justify-center w-full lg:w-[900px] mx-auto">
                     <div onLoad={() => setCoinsLoad(false)} className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full mx-auto">
                         {coinsLoad && <span className="loader mx-auto"></span>}
                         {data.map((item) => (
