@@ -55,18 +55,18 @@ const Home = () => {
         <div className="w-[90%] mx-auto my-5">
             <Hero setDisplayCoin={setDisplayCoin} allCoin={allCoin} />
             <h1 id="market-updates"
-                className="text-white text-4xl md:text-7xl mt-5 
+                className="text-white text-4xl md:text-7xl lg:text-9xl py-7 
                   text-center font-bold"
             >
                 Market Updates
             </h1>
             <form
                 onSubmit={searchHandler}
-                className="my-5 bg-white md:w-[425px] h-11 md:h-12 flex px-2 
+                className="my-5 bg-white h-11 md:h-12 flex px-2 
                 justify-between items-center rounded-lg">
                 <input
                     onChange={inputHandler} required value={input}
-                    className="w-60 md:w-80 bg-transparent h-8 text-black md:h-10 outline-none rounded-lg"
+                    className="w-60 md:w-80 lg:w-[80%] bg-transparent h-8 text-black md:h-10 outline-none rounded-lg"
                     type="text"
                     placeholder="Search crypto.."
                     list="coinlist"
@@ -110,9 +110,9 @@ const Home = () => {
                             whiteSpace: 'nowrap',
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
-                            width: '100px'
+
                         }}
-                            className="flex items-center gap-1 sm:gap-3 md:gap-5">
+                            className="flex w-[100px] md:w-[200px] lg:w-full items-center gap-1 sm:gap-3 md:gap-5">
                             <img className="h-4 sm:h-6 lg:h-8 ml-1 sm:ml-2 md:ml-3" src={item.image} alt="" />
                             <p className="ml-2">{item.name}</p>
                         </div>
