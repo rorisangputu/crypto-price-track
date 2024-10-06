@@ -84,7 +84,8 @@ const Home = () => {
                     Search
                 </button>
             </form>
-            <div className="w-[90%] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] flex mx-auto justify-between text-white text-medium mb-2">
+            {/* sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] */}
+            <div className="flex justify-between text-white text-medium mb-2">
                 <p className="ml-1">Currency: {currency.symbol}</p>
                 <select onChange={currencyHandler} className='bg-transparent w-[70px] rounded-md font-medium 
                 '>
@@ -93,8 +94,9 @@ const Home = () => {
                     <option value="zar">ZAR</option>
                 </select>
             </div>
-            <div className="w-[90%] md:max-w-[700px] lg:max-w-[900px] mx-auto  shadow-xl rounded-lg mb-10">
-                <div className="grid grid-cols-[0.2fr,2fr,1fr,1.4fr,1.5fr] p-4 rounded-t-xl  items-center text-white bg-gradient-to-r from-[#2600fc] to-[#ff00ea] ">
+            {/* md:max-w-[700px] lg:max-w-[900px] mx-auto */}
+            <div className="shadow-xl rounded-lg mb-10">
+                <div className="grid grid-cols-[0.2fr,2fr,1fr,1fr,1.5fr] p-4 rounded-t-xl  items-center text-white bg-gradient-to-r from-[#2600fc] to-[#ff00ea] ">
                     <p>#</p>
                     <p className="font-semibold">Coins</p>
                     <p className="font-semibold">Price</p>
@@ -102,15 +104,28 @@ const Home = () => {
                     <p className="font-semibold">Market Cap</p>
                 </div>
                 {displayCoin.slice(0, 10).map((item, index) => (
-                    <Link to={`/coin/${item.id}`} key={index} className="border-b grid grid-cols-[0.2fr,2fr,1fr,1.4fr,1.5fr] p-4 flex items-center text-white  text-sm md:text-lg">
+                    <Link to={`/coin/${item.id}`} key={index} className="border-b grid grid-cols-[0.2fr,2fr,1fr,1fr,1.5fr] p-4 flex items-center text-white  text-sm md:text-lg">
                         <p>{item.market_cap_rank}</p>
-                        <div className="flex items-center gap-1 sm:gap-3 md:gap-5">
+                        <div style={{
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            width: '100px'
+                        }}
+                            className="flex items-center gap-1 sm:gap-3 md:gap-5">
                             <img className="h-4 sm:h-6 lg:h-8 ml-1 sm:ml-2 md:ml-3" src={item.image} alt="" />
                             <p className="ml-2">{item.name}</p>
                         </div>
                         <p>{item.current_price.toLocaleString()}</p>
                         <p className={item.price_change_percentage_24h > 0 ? "text-green-600" : "text-red-600"}>{Math.floor(item.price_change_percentage_24h * 100) / 100}</p>
-                        <p>{item.market_cap ? Number(item.market_cap).toLocaleString() : 'N/A'}</p>
+                        <p style={{
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                        }}>
+                            {item.market_cap ? Number(item.market_cap).toLocaleString() : 'N/A'}
+                        </p>
+
                     </Link>
                 ))}
             </div>
